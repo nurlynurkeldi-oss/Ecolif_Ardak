@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoLif_Ardak — Табиғи өнімдер, Алматы</title>
+  <meta name="description" content="EcoLif_Ardak — YERSAYTD брендінің табиғи күтім, макияж және денсаулық өнімдері. Тапсырыс WhatsApp арқылы, жеткізу бүкіл Қазақстан бойынша.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body id="top">
+
+  <!-- ШАПКА -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="EcoLif_Ardak">
+        <img class="brand-mark" src="images/logo.png" alt="YERSAYTD" aria-hidden="true">
+        <span class="brand-name">EcoLif<small>_Ardak</small></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Негізгі навигация">
+        <a href="#catalog" data-i18n="nav_catalog">Каталог</a>
+        <a href="#about" data-i18n="nav_about">Біз туралы</a>
+        <a href="#reviews" data-i18n="nav_reviews">Пікірлер</a>
+        <a href="#contacts" data-i18n="nav_contacts">Байланыс</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Тіл">
+          <button id="langKk" class="active" type="button">KZ</button>
+          <button id="langRu" type="button">RU</button>
+        </div>
+        <a class="btn btn-ghost btn-phone" id="phoneLink" href="tel:+77071938373">8&nbsp;707&nbsp;193&nbsp;83&nbsp;73</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- БЕТ -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="hero-badge" data-i18n="hero_badge">100% табиғи құрам</span>
+        <h1><span data-i18n="hero_title_1">Деніңіз бен сұлулығыңызға</span><br><em data-i18n="hero_title_2">табиғи күтім</em></h1>
+        <div class="hero-tagline" data-i18n="hero_tagline">Тәбиғат сыйы — халқымызға</div>
+        <p class="hero-lead" data-i18n="hero_text"></p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#catalog" data-i18n="hero_cta_catalog">Каталогқа қарау</a>
+          <a class="btn btn-wa" id="heroWa" href="#" target="_blank" rel="noopener" data-i18n="hero_cta_wa">WhatsApp-та жазу</a>
+        </div>
+        <ul class="hero-stats">
+          <li><span>🌿</span><span data-i18n="hero_stat1">Табиғи құрам</span></li>
+          <li><span>🚚</span><span data-i18n="hero_stat2">Жеткізу — бүкіл ҚР</span></li>
+          <li><span>💬</span><span data-i18n="hero_stat3">Тапсырыс — WhatsApp</span></li>
+          <li><span>🇰🇿</span><span data-i18n="hero_stat4">Алматы, Қазақстан</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-mosaic" aria-hidden="true">
+        <div class="mosaic-tile t1">☀️</div>
+        <div class="mosaic-tile t2">🫧</div>
+        <div class="mosaic-tile t3">🌙</div>
+        <div class="mosaic-tile t4">✨</div>
+        <div class="mosaic-tile t5">🍵</div>
+        <div class="mosaic-tile t6">💄</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Қазақ өрнек жолағы -->
+  <div class="ornament-band" aria-hidden="true"></div>
+  <section class="section" id="catalog">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="catalog_title">Каталог</h2>
+        <p data-i18n="catalog_sub">Қажетті тауарлар — бір жерде</p>
+      </div>
+
+      <div class="chips" id="chips" role="tablist">
+        <button class="chip active" data-cat="all" data-i18n="cat_all">Барлығы</button>
+        <button class="chip" data-cat="face" data-i18n="cat_face">Бетке</button>
+        <button class="chip" data-cat="body" data-i18n="cat_body">Денеге</button>
+        <button class="chip" data-cat="health" data-i18n="cat_health">Денсаулық</button>
+        <button class="chip" data-cat="fragrance" data-i18n="cat_fragrance">Парфюмдер</button>
+      </div>
+
+      <div class="grid" id="productGrid"><!-- JS арқылы толыды --></div>
+    </div>
+  </section>
+
+  <!-- БИЗ ТУРАЛЫ -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="about_title">Біз туралы</h2>
+        <p data-i18n="about_sub">Қолдан жасалған, табиғи күтім — бүкіл отбасына</p>
+      </div>
+
+      <div class="about-quote">
+        <span class="aq-mark">«</span>
+        <p data-i18n="hero_tagline">Тәбиғат сыйы — халқымызға</p>
+        <span class="aq-mark">»</span>
+      </div>
+
+      <p class="about-lead" data-i18n="about_text"></p>
+
+      <div class="about-grid">
+        <div class="about-card">
+          <span class="about-num">01</span>
+          <span class="about-ico">🌿</span>
+          <h3 data-i18n="about_card1_t">Табиғи шикізат</h3>
+          <p data-i18n="about_card1_d">Өнімдер — табиғи құрамда, теріге жұмсақ күтім үшін.</p>
+        </div>
+        <div class="about-card">
+          <span class="about-num">02</span>
+          <span class="about-ico">💬</span>
+          <h3 data-i18n="about_card2_t">Жеке байланыс</h3>
+          <p data-i18n="about_card2_d">Сұрағыңыз болса — WhatsApp-та жауап береміз.</p>
+        </div>
+        <div class="about-card">
+          <span class="about-num">03</span>
+          <span class="about-ico">🚚</span>
+          <h3 data-i18n="about_card3_t">Жеткізу</h3>
+          <p data-i18n="about_card3_d">Алматыдан бүкіл Қазақстан бойынша жібереміз.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ПІКІРЛЕР -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="reviews_title">Пікірлер</h2>
+        <p data-i18n="reviews_sub">Клиенттеріміздің пікірі — біздің ең үлкен мақтанышымыз</p>
+      </div>
+
+      <form class="review-form" id="reviewForm">
+        <div class="rf-row">
+          <input id="rfName" type="text" data-i18n-ph="rf_name_ph" placeholder="Атыңыз" required maxlength="40" autocomplete="name">
+          <div class="rf-stars" id="rfStars" aria-label="Баға">
+            <button type="button" class="rf-star" data-v="1">★</button>
+            <button type="button" class="rf-star active" data-v="2">★</button>
+            <button type="button" class="rf-star active" data-v="3">★</button>
+            <button type="button" class="rf-star active" data-v="4">★</button>
+            <button type="button" class="rf-star active" data-v="5">★</button>
+          </div>
+        </div>
+        <textarea id="rfText" rows="3" data-i18n-ph="rf_text_ph" placeholder="Пікіріңізді жазыңыз…" required maxlength="500"></textarea>
+        <div class="rf-photo">
+          <input type="file" id="rfPhotoFile" accept="image/*" hidden>
+          <label for="rfPhotoFile" class="rf-photo-btn" data-i18n="rf_photo_label">📷 Сурет қосу</label>
+          <img id="rfPreview" alt="" hidden>
+        </div>
+        <button class="btn btn-primary rf-submit" type="submit" data-i18n="rf_submit">Пікір жіберу</button>
+        <p class="rf-note" data-i18n="rf_note">Пікіріңіз бізге WhatsApp-қа жетеді, тексерілген соң оқушылар көретін тізімге қосылады.</p>
+      </form>
+
+      <p class="admin-note" id="adminNote" hidden data-i18n="admin_note">Админ режимі қосулы — карточкадағы ✕ түймесімен пікірді өшіруге болады</p>
+
+      <div class="reviews-grid" id="reviewsGrid"><!-- JS арқылы толыды --></div>
+    </div>
+  </section>
+
+  <!-- ТӨЛЕМ -->
+  <section class="section section-alt" id="payment">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="pay_title">Төлем</h2>
+        <p data-i18n="pay_sub">Kaspi арқылы ыңғайлы төлеңіз</p>
+      </div>
+      <div class="pay-box">
+        <div class="pay-qr">
+          <div class="pay-qr-fallback">
+            <div class="pay-qr-ico">💳</div>
+            <div class="pay-qr-num">8 707 193 83 73</div>
+            <div class="pay-qr-hint" data-i18n="pay_qr_hint">QR-ды WhatsApp-тан сұраңыз</div>
+          </div>
+          <img class="pay-qr-img" src="images/kaspi-qr.png" alt="Kaspi QR" onerror="this.remove()">
+        </div>
+        <div class="pay-info">
+          <div class="pay-num-row">
+            <div>
+              <div class="pay-num-label" data-i18n="pay_to">Kaspi-ге аударылатын нөмір</div>
+              <div class="pay-num">8 707 193 83 73</div>
+            </div>
+            <button class="btn-copy" id="copyKaspi" type="button" data-i18n="pay_copy">Нөмірді көшіру</button>
+          </div>
+          <a class="btn-kaspi" id="kaspiLinkBtn" href="#" target="_blank" rel="noopener" data-i18n="pay_btn" hidden>Kaspi арқылы төлеу</a>
+          <ol class="pay-steps">
+            <li data-i18n="pay_step1">Kaspi қосымшасын ашып, «Жіберу» батырмасын басыңыз</li>
+            <li data-i18n="pay_step2">Нөмірді енгізіңіз: 8 707 193 83 73</li>
+            <li data-i18n="pay_step3">Соманы енгізіп, аударымды растаңыз</li>
+          </ol>
+          <div class="pay-note" data-i18n="pay_note">Төлемнен кейін чекті WhatsApp-қа жіберіңіз — тапсырыс бірден расталады</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- БАЙЛАНЫС -->
+  <section class="section" id="contacts">
+    <div class="container">
+      <div class="section-head">
+        <h2 data-i18n="contacts_title">Байланыс</h2>
+        <p data-i18n="contacts_sub">Тапсырыс беріңіз — хабарласамыз, жеткіземіз.</p>
+      </div>
+
+      <div class="contacts-card">
+        <div class="contact-row">
+          <span class="contact-ico">📞</span>
+          <div>
+            <div class="contact-label" data-i18n="contacts_phone_label">Телефон</div>
+            <a href="tel:+77071938373" class="contact-value">8 707 193 83 73</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <span class="contact-ico">💳</span>
+          <div>
+            <div class="contact-label" data-i18n="contact_kaspi">Kaspi</div>
+            <div class="contact-value">8 707 193 83 73</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <span class="contact-ico">📍</span>
+          <div>
+            <div class="contact-label" data-i18n="contacts_addr_label">Мекенжай</div>
+            <div class="contact-value" data-i18n="contacts_addr">Алматы қаласы, Арғымақ базары</div>
+          </div>
+        </div>
+        <div class="contact-row">
+          <span class="contact-ico">🗺️</span>
+          <div>
+            <div class="contact-label" data-i18n="contacts_2gis_label">2GIS карта</div>
+            <a class="contact-value contact-2gis" href="https://2gis.kz/almaty/geo/70030077127460099/76.877226,43.270199" target="_blank" rel="noopener" data-i18n="contacts_2gis_value">2GIS-те ашу →</a>
+          </div>
+        </div>
+        <div class="contact-row">
+          <span class="contact-ico">🕘</span>
+          <div>
+            <div class="contact-label" data-i18n="contacts_hours_label">Жұмыс уақыты</div>
+            <div class="contact-value" data-i18n="contacts_hours_value">9:00 – 17:00</div>
+          </div>
+        </div>
+        <div class="socials-block">
+          <div class="contact-label" data-i18n="contacts_socials_label">Әлеуметтік желілер</div>
+          <div class="social-links">
+            <a class="social-btn ig" href="https://instagram.com/nu2001119" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+              <span>Instagram</span>
+            </a>
+            <a class="social-btn tt" href="https://www.tiktok.com/@_ardak_1" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+              <span>TikTok</span>
+            </a>
+            <a class="social-btn wa" href="https://wa.me/77071938373" target="_blank" rel="noopener">
+              <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.2c1.4.8 3 1.2 4.7 1.2 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.6c-1.5 0-3-.4-4.3-1.2l-.3-.2-4.3 1.3 1.3-4.2-.2-.3c-1-1.4-1.5-3.1-1.5-4.8 0-5.3 4.4-9.6 9.8-9.6s9.8 4.3 9.8 9.6-4.4 9.6-9.8 9.6zm5.4-7.2c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.6-.9-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1 2.1 3.3 5.1 4.6c.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4s-.3-.2-.6-.3z"/></svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+        <a class="btn btn-wa btn-big" id="contactWa" href="#" target="_blank" rel="noopener" data-i18n="contacts_wa_btn">WhatsApp-та тапсырыс беру</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Аяқ -->
+  <div class="ornament-band ornament-dark" aria-hidden="true"></div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand brand-small">
+        <img class="brand-mark" src="images/logo.png" alt="YERSAYTD" aria-hidden="true">
+        <span class="brand-name">EcoLif<small>_Ardak</small></span>
+      </div>
+      <p data-i18n="footer_text">© EcoLif_Ardak — табиғи өнімдер</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com/nu2001119" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@_ardak_1" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+        </a>
+        <a href="https://wa.me/77071938373" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.2c1.4.8 3 1.2 4.7 1.2 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.6c-1.5 0-3-.4-4.3-1.2l-.3-.2-4.3 1.3 1.3-4.2-.2-.3c-1-1.4-1.5-3.1-1.5-4.8 0-5.3 4.4-9.6 9.8-9.6s9.8 4.3 9.8 9.6-4.4 9.6-9.8 9.6zm5.4-7.2c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.6-.9-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1 2.1 3.3 5.1 4.6c.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4s-.3-.2-.6-.3z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Жүзетін WhatsApp батырмасы -->
+  <a class="wa-fab" id="waFab" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
+      <path fill="#fff" d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.2c1.4.8 3 1.2 4.7 1.2 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.6c-1.5 0-3-.4-4.3-1.2l-.3-.2-4.3 1.3 1.3-4.2-.2-.3c-1-1.4-1.5-3.1-1.5-4.8 0-5.3 4.4-9.6 9.8-9.6s9.8 4.3 9.8 9.6-4.4 9.6-9.8 9.6zm5.4-7.2c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-.9 1.2-.3.2-.6.1c-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1s0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5s0-.4 0-.5-.7-1.6-.9-2.2-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.5 1.1 2.9 1.2 3.1 2.1 3.3 5.1 4.6c.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4s-.3-.2-.6-.3z"/>
+    </svg>
+  </a>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/reviews.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
